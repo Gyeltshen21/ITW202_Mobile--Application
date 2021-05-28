@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.gcit.sms">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.App">
+        <activity android:name=".AdminTimeTableUploadActivity"></activity>
+        <activity android:name=".TeacherTimeTableActivity" />
+        <activity android:name=".TeacherSettingActivity" />
+        <activity android:name=".TeacherRegisterActivity" />
+        <activity android:name=".TeacherProfileActivity" />
+        <activity android:name=".TeacherDetailsActivity" />
+        <activity android:name=".TeacherHomeActivity" />
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".PhoneAuthActivity" />
+        <activity android:name=".HomeActivity" />
+        <activity android:name=".AdminTimeTableActivity" />
+        <activity android:name=".AdminSettingActivity" />
+        <activity android:name=".AdminProfileActivity" />
+        <activity android:name=".AdminAddNewDetailsActivity" />
+        <activity android:name=".AdminDetailsViewActivity" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

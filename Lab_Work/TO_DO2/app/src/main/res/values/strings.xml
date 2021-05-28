@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">ScrollView</string>
+    <string name="rub">Royal University of Bhutan</string>
+    <string name="gcit">Gyelpozhing College of Information Technology</string>
+    <string name="information">
+        <b>RUB</b>
+        The Royal University of Bhutan was launched on 2nd June 2003 to provide tertiary education in Bhutan.
+        The Royal Charter and the Statutes provide the legal instruments for the University.
+
+        The overall rationale of the University as set out in the Royal Charter and Statutes is the "dissemination of
+        knowledge and the advancement of learning through a balanced, well regulated and sound tertiary education system
+        for the economic and cultural development of the Kingdom of Bhutan and to promote the cultural enrichment, personal
+        development and well being of our people."
+
+        The specific objectives of the University are:
+
+        to develope and provide programmes of study at tertiary education level, of relevance and good quality which will
+        fulfill the needs of the country for an educated and skilled population, and
+        to promote and conduct research, to contribute to the creation of knowledge in an international context and to promote
+        the transfer of knowledge of relevance to Bhutan.
+        (Royal Charter and the Statutes of the Royal University of Bhutan 2003:3)
+
+        RUB Vision, Mission and Core Values
+
+        VISION
+        An internationally recognized university steeped in GNH values
+
+        MISSION
+        To provide programmes of study at tertiary education level, of relevance and good quality which will fulfill the needs
+        of the country for an educated, skilled and humane population;
+        To promote and conduct research to contribute to the creation of knowledge of relevance to Bhutan, and
+        To provide training and professional services for the enhancement of knowledge, capacity building and community development.
+
+        <b>GCIT</b>
+        The Gyalposhing College of Information Technology, officially inaugurated on 6th October, 2017 is one of the integral
+        colleges of the Royal University of Bhutan. The decision to establish Gyalpozhing College of Information Technology was
+        made during the meeting held on February 2, 2017 at the Hon’ble Prime Minister’s Office. In line with the decision, the
+        chairman of Tertiary Education Board issued an executive order no. Ref No. MoE/EO/2017/4513 dated 20 February 2017 to
+        establish the College. The institute is 24 kilometers away from Mongar town stretching an area of 62 acres of land
+        engulfed by lush green mountains. The university is one of the three new colleges established in Eastern Bhutan with the
+        VISION to be the ‘Center of Excellence in information Technology steeped in GNH values’. The college at its initial stage
+        offers undergraduate programme in Bachelors of computer applications. The programme is taught by qualified and dedicated
+        local and expatriate faculties.The methodology of “Learning by Doing” is a unique one adopted by GCIT. It aims at giving
+        hands- on experience which helps the students understand the practical implementation aspects and the concepts associated
+        with it.Furthermore, the college aims to diversify the programmes by including more practical and job-oriented course in
+        the long-run.
+    </string>
+</resources>
