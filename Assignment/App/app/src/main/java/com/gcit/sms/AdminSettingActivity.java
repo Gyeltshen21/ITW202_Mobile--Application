@@ -44,7 +44,8 @@ public class AdminSettingActivity extends AppCompatActivity {
         else{
             String name = adminEditTextFullName.getText().toString().trim();
             String email = adminEditTextEmail.getText().toString().trim();
-            String phoneNo = adminEditTextPhoneNo.getText().toString().trim();
+            String phone = adminEditTextPhoneNo.getText().toString().trim();
+            String phoneNo = "+975" +phone;
             DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("SMSadmin");
             Query checkUser = databaseReference.orderByChild("schoolCode").equalTo(s1);
             checkUser.addListenerForSingleValueEvent(new ValueEventListener() {
@@ -99,14 +100,13 @@ public class AdminSettingActivity extends AppCompatActivity {
     }
     private boolean validatePhoneNumber(){
         String val = adminEditTextPhoneNo.getText().toString().trim();
-        String checksTNumber = "(0/91)?[7][7][0-9]{6}";
-        String checksBNumber = "(0/91)?[1][7][0-9]{6}";
+        String checksBNumber = "[1][7][0-9]{6}";
         if(val.isEmpty()){
             adminEditTextPhoneNo.setError("Phone Number is Required!");
             adminEditTextPhoneNo.requestFocus();
             return false;
         }
-        else if(!val.matches(checksTNumber)){
+        else if(!val.matches(checksBNumber)){
             adminEditTextPhoneNo.setError("Invalid Phone Number");
             adminEditTextPhoneNo.requestFocus();
             return false;

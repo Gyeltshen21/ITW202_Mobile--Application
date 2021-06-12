@@ -7,7 +7,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:background="@drawable/toolbargradient">
 
         <RelativeLayout
             android:layout_width="0dp"
@@ -35,7 +36,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="5dp"
-                android:textSize="15sp" />
+                android:textColor="@color/black"
+                style="@style/Text_Theme" />
 
             <TextView
                 android:id="@+id/TeacherID"
@@ -43,7 +45,8 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/TeacherName"
                 android:padding="5dp"
-                android:textSize="15sp" />
+                android:textColor="@color/black"
+                style="@style/Text_Theme" />
 
             <TextView
                 android:id="@+id/TeacherEmail"
@@ -59,7 +62,8 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/TeacherEmail"
                 android:padding="5dp"
-                android:textSize="15sp" />
+                android:textColor="@color/black"
+                style="@style/Text_Theme" />
 
             <TextView
                 android:id="@+id/TeacherCourse"
@@ -67,7 +71,8 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/TeacherPhoneNo"
                 android:padding="5dp"
-                android:textSize="15sp" />
+                android:textColor="@color/black"
+                style="@style/Text_Theme" />
 
             <TextView
                 android:id="@+id/TeacherClass"
@@ -75,7 +80,8 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/TeacherCourse"
                 android:padding="5dp"
-                android:textSize="15sp" />
+                android:textColor="@color/black"
+                style="@style/Text_Theme"/>
 
         </RelativeLayout>
 

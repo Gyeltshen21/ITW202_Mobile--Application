@@ -7,13 +7,15 @@
     android:layout_height="match_parent"
     tools:context=".HomeActivity"
     android:fitsSystemWindows="true"
-    tools:openDrawer="start">
+    tools:openDrawer="start"
+    android:background="@drawable/bg1">
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/adminnav"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
+        android:background="@drawable/bg2"
         app:headerLayout="@layout/admin_header"
         app:menu="@menu/admin_menu" />
 
@@ -24,111 +26,135 @@
 
         <include
             android:id="@+id/admin_toolbar"
-            layout="@layout/toolbar" />
+            layout="@layout/toolbar"
+            />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/school"
-            android:gravity="center"
-            android:orientation="horizontal"
-            android:padding="10dp">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:text="School Management System"
-                android:textColor="@color/grey_white"
-                android:textSize="24sp"
-                android:textStyle="italic" />
-        </LinearLayout>
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:background="@color/grey_white"
-            android:orientation="horizontal"
-            android:padding="15dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
 
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_centerInParent="true"
-                android:onClick="TimeTable"
-                android:src="@drawable/timetable" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/school"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginLeft="20dp"
-                android:onClick="TimeTable"
-                android:text="TimeTable"
-                android:textAlignment="center"
-                android:textSize="25sp"
-                android:textStyle="bold" />
-        </LinearLayout>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:text="School Management System"
+                            android:textColor="@color/grey_white"
+                            android:textSize="24sp"
+                            android:textStyle="italic" />
+                    </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:background="@color/grey_white"
-            android:orientation="horizontal"
-            android:padding="15dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@drawable/toolbargradient"
+                        android:orientation="horizontal"
+                        android:padding="15dp">
 
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_centerInParent="true"
-                android:onClick="TeacherDetails"
-                android:src="@drawable/ebook" />
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_centerInParent="true"
+                            android:onClick="TimeTable"
+                            android:src="@drawable/images_removebg_preview" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_gravity="center"
-                android:layout_marginLeft="20dp"
-                android:onClick="TeacherDetails"
-                android:text="Teacher Details"
-                android:textAlignment="center"
-                android:textSize="25sp"
-                android:textStyle="bold" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="20dp"
+                            android:onClick="TimeTable"
+                            android:text="TimeTable"
+                            android:textSize="25sp"
+                            android:textColor="@color/black"
+                            android:textAlignment="center"
+                            style="@style/Text_Theme" />
+                    </LinearLayout>
 
-        </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@drawable/toolbargradient"
+                        android:orientation="horizontal"
+                        android:padding="15dp">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:background="@color/grey_white"
-            android:orientation="horizontal"
-            android:padding="15dp">
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_centerInParent="true"
+                            android:onClick="TeacherDetails"
+                            android:src="@drawable/images_removebg_preview__1_" />
 
-            <ImageView
-                android:id="@+id/Imageview3"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_centerInParent="true"
-                android:onClick="CreateAccount"
-                android:src="@drawable/createccount" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="20dp"
+                            android:onClick="TeacherDetails"
+                            android:text="Teacher Details"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="25sp"
+                            style="@style/Text_Theme" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_gravity="center"
-                android:layout_marginLeft="20dp"
-                android:onClick="CreateAccount"
-                android:text="CREATE ACCOUNT"
-                android:textAlignment="center"
-                android:textSize="25sp"
-                android:textStyle="bold" />
+                    </LinearLayout>
 
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@drawable/toolbargradient"
+                        android:orientation="horizontal"
+                        android:padding="15dp">
+
+                        <ImageView
+                            android:id="@+id/Imageview3"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_centerInParent="true"
+                            android:onClick="CreateAccount"
+                            android:src="@drawable/images_removebg_preview__2_" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="20dp"
+                            android:onClick="CreateAccount"
+                            android:text="Create Account"
+                            android:textAlignment="center"
+                            android:textSize="25sp"
+                            android:textColor="@color/black"
+                            android:textAllCaps="false"
+                            style="@style/Text_Theme"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </ScrollView>
         </LinearLayout>
     </LinearLayout>
 </androidx.drawerlayout.widget.DrawerLayout>

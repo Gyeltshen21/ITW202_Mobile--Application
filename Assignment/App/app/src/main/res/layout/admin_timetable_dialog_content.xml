@@ -1,6 +1,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg1"
     android:orientation="vertical">
 
     <RelativeLayout
@@ -20,7 +21,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:layout_margin="10dp"
-                android:background="@color/white"
+                android:background="@drawable/bg1"
                 android:gravity="center"
                 android:isScrollContainer="true">
 
@@ -40,7 +41,7 @@
                     android:id="@+id/period_row"
                     android:layout_margin="3dp"
                     android:layout_marginTop="10dp"
-                    android:background="@color/teal_700">
+                    android:background="@color/teal_200">
 
                     <TextView
                         android:layout_width="80dp"
@@ -128,7 +129,7 @@
                 <TableRow
                     android:id="@+id/time_row"
                     android:layout_margin="3dp"
-                    android:background="@color/teal_700">
+                    android:background="@color/teal_200">
 
                     <TextView
                         android:layout_width="80dp"
@@ -216,7 +217,7 @@
                 <TableRow
                     android:id="@+id/Monday_row"
                     android:layout_margin="3dp"
-                    android:background="@color/teal_700">
+                    android:background="@color/teal_200">
 
                     <TextView
                         android:layout_width="80dp"
@@ -304,7 +305,7 @@
                 <TableRow
                     android:id="@+id/Tuesday_row"
                     android:layout_margin="3dp"
-                    android:background="@color/teal_700">
+                    android:background="@color/teal_200">
 
                     <TextView
                         android:layout_width="80dp"
@@ -392,7 +393,7 @@
                 <TableRow
                     android:id="@+id/Wednesday_row"
                     android:layout_margin="3dp"
-                    android:background="@color/teal_700">
+                    android:background="@color/teal_200">
 
                     <TextView
                         android:layout_width="80dp"
@@ -480,7 +481,7 @@
                 <TableRow
                     android:id="@+id/Thursday_row"
                     android:layout_margin="3dp"
-                    android:background="@color/teal_700">
+                    android:background="@color/teal_200">
 
                     <TextView
                         android:layout_width="80dp"
@@ -568,7 +569,7 @@
                 <TableRow
                     android:id="@+id/Friday_row"
                     android:layout_margin="3dp"
-                    android:background="@color/teal_700">
+                    android:background="@color/teal_200">
 
                     <TextView
                         android:layout_width="80dp"
@@ -656,7 +657,7 @@
                 <TableRow
                     android:id="@+id/Saturday_row"
                     android:layout_margin="3dp"
-                    android:background="@color/teal_700">
+                    android:background="@color/teal_200">
 
                     <TextView
                         android:layout_width="80dp"
@@ -746,12 +747,13 @@
 
         <Button
             android:id="@+id/updateBtn"
-            android:layout_width="wrap_content"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/tableScrollbar"
             android:layout_centerInParent="true"
             android:layout_margin="20dp"
             android:text="Update"
+            style="@style/Btn_Theme"
             android:textAllCaps="false" />
 
     </RelativeLayout>

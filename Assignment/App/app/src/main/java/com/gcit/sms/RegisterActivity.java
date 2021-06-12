@@ -41,7 +41,7 @@ public class RegisterActivity extends AppCompatActivity {
             String schoolCode = editTextSchoolCode.getEditText().getText().toString().trim();
             String email = editTextEmail.getEditText().getText().toString().trim();
             String password = editTextPassword.getEditText().getText().toString().trim();
-            Intent registerIntent = new Intent(getApplicationContext(), PhoneAuthActivity.class);
+            Intent registerIntent = new Intent(getApplicationContext(), AdminPhoneAuthActivity.class);
             registerIntent.putExtra("admin_name",name);
             registerIntent.putExtra("sCode",schoolCode);
             registerIntent.putExtra("email",email);

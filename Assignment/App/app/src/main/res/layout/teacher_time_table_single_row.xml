@@ -56,7 +56,7 @@
                     android:id="@+id/period_row"
                     android:layout_margin="3dp"
                     android:layout_marginTop="10dp"
-                    android:background="@color/teal_700">
+                    android:background="@color/teal_200">
 
                     <TextView
                         android:layout_width="90dp"
@@ -144,7 +144,7 @@
                 <TableRow
                     android:id="@+id/time_row"
                     android:layout_margin="3dp"
-                    android:background="@color/teal_700">
+                    android:background="@color/teal_200">
 
                     <TextView
                         android:layout_width="90dp"
@@ -232,7 +232,7 @@
                 <TableRow
                     android:id="@+id/Monday_row"
                     android:layout_margin="3dp"
-                    android:background="@color/teal_700">
+                    android:background="@color/teal_200">
 
                     <TextView
                         android:layout_width="90dp"
@@ -321,7 +321,7 @@
                 <TableRow
                     android:id="@+id/Tuesday_row"
                     android:layout_margin="3dp"
-                    android:background="@color/teal_700">
+                    android:background="@color/teal_200">
 
                     <TextView
                         android:layout_width="90dp"
@@ -409,7 +409,7 @@
                 <TableRow
                     android:id="@+id/Wednesday_row"
                     android:layout_margin="3dp"
-                    android:background="@color/teal_700">
+                    android:background="@color/teal_200">
 
                     <TextView
                         android:layout_width="90dp"
@@ -505,7 +505,7 @@
                 <TableRow
                     android:id="@+id/Thursday_row"
                     android:layout_margin="3dp"
-                    android:background="@color/teal_700">
+                    android:background="@color/teal_200">
 
                     <TextView
                         android:layout_width="90dp"
@@ -601,7 +601,7 @@
                 <TableRow
                     android:id="@+id/Friday_row"
                     android:layout_margin="3dp"
-                    android:background="@color/teal_700">
+                    android:background="@color/teal_200">
 
                     <TextView
                         android:layout_width="90dp"
@@ -697,7 +697,7 @@
                 <TableRow
                     android:id="@+id/Saturday_row"
                     android:layout_margin="3dp"
-                    android:background="@color/teal_700">
+                    android:background="@color/teal_200">
 
                     <TextView
                         android:layout_width="90dp"

@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg1"
     tools:context=".AdminTimeTableUploadActivity">
 
     <RelativeLayout
@@ -21,7 +22,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:background="@color/colorPrimary"
+                android:background="@drawable/toolbargradient"
                 android:gravity="center">
 
                 <ImageView
@@ -34,11 +35,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:fontFamily="cursive"
                     android:text="Add new TimeTable"
                     android:textAlignment="center"
-                    android:textColor="@color/white"
-                    android:textSize="20sp"
-                    android:textStyle="italic" />
+                    android:layout_marginLeft="30dp"
+                    style="@style/Text_Theme"/>
 
             </androidx.appcompat.widget.Toolbar>
         </LinearLayout>
@@ -61,6 +65,7 @@
 
                 <EditText
                     android:id="@+id/Class"
+                    android:background="@drawable/toolbargradient"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Enter class here" />
@@ -69,6 +74,7 @@
                     android:id="@+id/Section"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="@drawable/toolbargradient"
                     android:layout_marginTop="10dp"
                     android:hint="Enter section here" />
 
@@ -77,7 +83,7 @@
                     android:id="@+id/period_row"
                     android:layout_margin="3dp"
                     android:layout_marginTop="10dp"
-                    android:background="@color/teal_700">
+                    android:background="@color/teal_200">
 
                     <TextView
                         android:layout_width="80dp"
@@ -165,7 +171,7 @@
                 <TableRow
                     android:id="@+id/time_row"
                     android:layout_margin="3dp"
-                    android:background="@color/teal_700">
+                    android:background="@color/teal_200">
 
                     <TextView
                         android:layout_width="80dp"
@@ -261,7 +267,7 @@
                 <TableRow
                     android:id="@+id/Monday_row"
                     android:layout_margin="3dp"
-                    android:background="@color/teal_700">
+                    android:background="@color/teal_200">
 
                     <TextView
                         android:layout_width="80dp"
@@ -357,7 +363,7 @@
                 <TableRow
                     android:id="@+id/Tuesday_row"
                     android:layout_margin="3dp"
-                    android:background="@color/teal_700">
+                    android:background="@color/teal_200">
 
                     <TextView
                         android:layout_width="80dp"
@@ -453,7 +459,7 @@
                 <TableRow
                     android:id="@+id/Wednesday_row"
                     android:layout_margin="3dp"
-                    android:background="@color/teal_700">
+                    android:background="@color/teal_200">
 
                     <TextView
                         android:layout_width="80dp"
@@ -549,7 +555,7 @@
                 <TableRow
                     android:id="@+id/Thursday_row"
                     android:layout_margin="3dp"
-                    android:background="@color/teal_700">
+                    android:background="@color/teal_200">
 
                     <TextView
                         android:layout_width="80dp"
@@ -645,7 +651,7 @@
                 <TableRow
                     android:id="@+id/Friday_row"
                     android:layout_margin="3dp"
-                    android:background="@color/teal_700">
+                    android:background="@color/teal_200">
 
                     <TextView
                         android:layout_width="80dp"
@@ -741,7 +747,7 @@
                 <TableRow
                     android:id="@+id/Saturday_row"
                     android:layout_margin="3dp"
-                    android:background="@color/teal_700">
+                    android:background="@color/teal_200">
 
                     <TextView
                         android:layout_width="80dp"
@@ -839,12 +845,13 @@
 
         <Button
             android:id="@+id/saveBtn"
-            android:layout_width="wrap_content"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/tableScrollbar"
             android:layout_centerInParent="true"
             android:layout_margin="20dp"
             android:text="Save"
+            style="@style/Btn_Theme"
             android:textAllCaps="false" />
 
     </RelativeLayout>

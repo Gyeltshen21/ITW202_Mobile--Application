@@ -88,17 +88,19 @@ public class TeacherProfileActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(),"Something went wrong",Toast.LENGTH_SHORT).show();
             }
         });
+        //Button to Choose photo
+        TeacherProfilePic.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openTeacherFileChooser();
+            }
+        });
     }
     //Back button to home
     public void GoBackToTeacherHome(View view) {
         Intent intent = new Intent(getApplicationContext(),TeacherHomeActivity.class);
         intent.putExtra("employeeID",sCode);
         startActivity(intent);
-    }
-
-    //Button to Choose photo
-    public void ChooseTeacherProfilePhoto(View view) {
-        openTeacherFileChooser();
     }
     //Method to choose file
     private void openTeacherFileChooser() {
@@ -135,6 +137,7 @@ public class TeacherProfileActivity extends AppCompatActivity {
     private void UploadFile() {
         final ProgressDialog progressDialog = new ProgressDialog(this);
         progressDialog.setTitle("Please wait...");
+        progressDialog.setCancelable(false);
         progressDialog.show();
         if(TeacherImageUri != null){
             final StorageReference fileReference = FirebaseStorage.getInstance().getReference("SMSemployee/" +sCode+ "/image.jpg");

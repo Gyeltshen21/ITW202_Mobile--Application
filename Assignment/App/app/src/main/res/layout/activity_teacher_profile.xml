@@ -9,31 +9,36 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="@drawable/adminbg">
 
         <androidx.appcompat.widget.Toolbar
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
+            android:background="@drawable/toolbargradient"
             android:gravity="center"
-            android:padding="5dp"
-            android:background="@color/colorPrimary">
+            android:padding="5dp">
+
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="GoBackToTeacherHome"
-                android:src="@drawable/ic_baseline_arrow_back_24"/>
+                android:src="@drawable/ic_baseline_arrow_back_24" />
 
             <TextView
+                style="@style/Text_Theme"
                 android:layout_width="wrap_content"
-                android:padding="10dp"
-                android:textSize="20sp"
-                android:textAlignment="center"
-                android:gravity="center"
-                android:textColor="@color/white"
-                android:textStyle="italic"
                 android:layout_height="wrap_content"
-                android:text="Teacher Profile Page"/>
+                android:layout_marginLeft="30dp"
+                android:gravity="center"
+                android:padding="10dp"
+                android:textStyle="bold"
+                android:fontFamily="cursive"
+
+                android:text="Teacher Profile Page"
+                android:textAlignment="center"
+                android:textSize="20sp" />
 
         </androidx.appcompat.widget.Toolbar>
 
@@ -41,72 +46,65 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="0.7"
-            android:orientation="horizontal"
-            android:background="@color/grey_white"
-            android:gravity="center_horizontal">
+            android:background="@drawable/adminbg"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/TeacherProfilePic"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
                 android:layout_marginTop="5dp"
-                android:src="@drawable/profile"/>
+                android:src="@drawable/profile" />
+
             <TextView
                 android:id="@+id/TeacherHeaderName1"
+                style="@style/TextName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="50dp"
-                android:textSize="30sp"
-                style="@style/TextName"/>
+                android:textSize="30sp" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="0.02"
-            android:background="@color/test"
-            android:gravity="left"
-            android:orientation="horizontal"
-            android:paddingLeft="30dp">
-
-            <Button
-                android:id="@+id/TeacherProfiePhoto"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:onClick="ChooseTeacherProfilePhoto"
-                android:text="Choose File" />
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
 
             <Button
                 android:id="@+id/TeacherProfiePhotoBtn"
-                android:layout_width="wrap_content"
+                style="@style/Btn_Theme"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="60dp"
                 android:onClick="UploadTeacherProfilePhoto"
                 android:text="Upload" />
 
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1.1"
-            android:paddingStart="16dp"
-            android:paddingEnd="16dp"
             android:layout_marginTop="20dp"
-            android:orientation="vertical">
+            android:layout_weight="1.1"
+            android:orientation="vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
+                android:background="@drawable/toolbargradient"
                 android:orientation="horizontal">
 
                 <ImageView
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_marginEnd="10dp"
-                    android:src="@drawable/ic_baseline_person_24"/>
+                    android:src="@drawable/ic_baseline_person_24" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -115,28 +113,31 @@
                     android:orientation="vertical">
 
                     <TextView
+                        style="@style/TextBlackTitle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="FullName"
-                        style="@style/TextBlackTitle"/>
+                        android:text="FullName" />
+
                     <TextView
                         android:id="@+id/TeacherName1"
+                        style="@style/TextDescription"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        style="@style/TextDescription"/>
+                        android:layout_height="wrap_content" />
                 </LinearLayout>
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
+                android:background="@drawable/toolbargradient"
                 android:orientation="horizontal">
 
                 <ImageView
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_marginEnd="10dp"
-                    android:src="@drawable/ic_baseline_code_24"/>
+                    android:src="@drawable/ic_baseline_code_24" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -145,28 +146,31 @@
                     android:orientation="vertical">
 
                     <TextView
+                        style="@style/TextBlackTitle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Employee ID"
-                        style="@style/TextBlackTitle"/>
+                        android:text="Employee ID" />
+
                     <TextView
                         android:id="@+id/TeacherEmployeeID1"
+                        style="@style/TextDescription"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        style="@style/TextDescription"/>
+                        android:layout_height="wrap_content" />
                 </LinearLayout>
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
+                android:background="@drawable/toolbargradient"
                 android:orientation="horizontal">
 
                 <ImageView
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_marginEnd="10dp"
-                    android:src="@drawable/ic_baseline_email_24"/>
+                    android:src="@drawable/ic_baseline_email_24" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -175,28 +179,31 @@
                     android:orientation="vertical">
 
                     <TextView
+                        style="@style/TextBlackTitle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Email"
-                        style="@style/TextBlackTitle"/>
+                        android:text="Email" />
+
                     <TextView
                         android:id="@+id/TeacherEmail1"
+                        style="@style/TextDescription"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        style="@style/TextDescription"/>
+                        android:layout_height="wrap_content" />
                 </LinearLayout>
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
+                android:background="@drawable/toolbargradient"
                 android:orientation="horizontal">
 
                 <ImageView
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_marginEnd="10dp"
-                    android:src="@drawable/ic_baseline_local_phone_24"/>
+                    android:src="@drawable/ic_baseline_local_phone_24" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -205,19 +212,18 @@
                     android:orientation="vertical">
 
                     <TextView
+                        style="@style/TextBlackTitle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Phone Number"
-                        style="@style/TextBlackTitle"/>
+                        android:text="Phone Number" />
+
                     <TextView
                         android:id="@+id/TeacherPhoneNo1"
+                        style="@style/TextDescription"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        style="@style/TextDescription"/>
+                        android:layout_height="wrap_content" />
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
-
-
 </ScrollView>

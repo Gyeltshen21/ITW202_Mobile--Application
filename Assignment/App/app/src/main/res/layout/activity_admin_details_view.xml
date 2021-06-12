@@ -17,7 +17,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:background="@color/colorPrimary"
+            android:background="@drawable/toolbargradient"
             android:gravity="center">
 
             <ImageView
@@ -30,11 +30,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:textColor="@color/black"
+                android:fontFamily="cursive"
+                android:layout_marginLeft="30dp"
                 android:text="Teacher Detail Lists"
                 android:textAlignment="center"
-                android:textColor="@color/white"
-                android:textSize="20sp"
-                android:textStyle="italic" />
+                style="@style/Text_Theme"/>
 
         </androidx.appcompat.widget.Toolbar>
 
@@ -48,6 +51,7 @@
             android:id="@+id/AdminPDFRecycleView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="@drawable/bg1"
             app:srcCompat="@android:drawable/ic_input_add" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -59,6 +63,7 @@
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="10dp"
             android:clickable="true"
+            android:backgroundTint="@color/teal_200"
             app:srcCompat="@android:drawable/ic_input_add" />
     </RelativeLayout>
 </LinearLayout>

@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/adminbg"
     tools:context=".AdminSettingActivity">
 
     <LinearLayout
@@ -15,7 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:background="@color/colorPrimary"
+            android:background="@drawable/toolbargradient"
             android:gravity="center"
             android:padding="5dp">
 
@@ -31,11 +32,14 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:padding="10dp"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:textColor="@color/black"
+                android:fontFamily="cursive"
+                android:layout_marginLeft="30dp"
                 android:text="Profile Update"
                 android:textAlignment="center"
-                android:textColor="@color/white"
-                android:textSize="20sp"
-                android:textStyle="italic" />
+                style="@style/Text_Theme"/>
 
         </androidx.appcompat.widget.Toolbar>
 
@@ -56,14 +60,15 @@
                 android:gravity="center"
                 android:text="Profile"
                 android:textAlignment="center"
-                android:textColor="@color/colorGreen"
+                android:textColor="#FFEB3B"
                 android:textSize="20sp"
-                android:visibility="invisible" />
+                android:visibility="invisible"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
+                android:background="@drawable/toolbargradient"
                 android:orientation="horizontal">
 
                 <ImageView
@@ -97,6 +102,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
+                android:background="@drawable/toolbargradient"
                 android:orientation="horizontal">
 
                 <ImageView
@@ -130,6 +136,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
+                android:background="@drawable/toolbargradient"
                 android:orientation="horizontal">
 
                 <ImageView
@@ -169,9 +176,11 @@
 
                 <Button
                     android:layout_width="200dp"
-                    android:layout_height="match_parent"
+                    style="@style/Btn_Theme"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:gravity="center"
+                    android:textAllCaps="false"
                     android:onClick="adminProfileUpdate"
                     android:text="Update" />
             </LinearLayout>

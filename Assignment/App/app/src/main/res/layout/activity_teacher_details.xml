@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
-        android:background="@color/colorPrimary"
+        android:background="@drawable/toolbargradient"
         android:gravity="center">
 
         <ImageView
@@ -24,11 +24,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
+            android:layout_marginLeft="30dp"
             android:text="Teacher Details"
             android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="20sp"
-            android:textStyle="italic" />
+            android:textSize="20dp"
+            android:fontFamily="cursive"
+            android:textStyle="bold"/>
 
     </androidx.appcompat.widget.Toolbar>
 
@@ -36,6 +37,7 @@
         android:id="@+id/TeacherRecycleView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/teacher_toolbar" />
+        android:layout_below="@id/teacher_toolbar"
+        android:background="@drawable/bg1"/>
 
 </RelativeLayout>

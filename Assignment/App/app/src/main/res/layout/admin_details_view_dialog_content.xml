@@ -9,19 +9,21 @@
         android:layout_height="match_parent"
         android:layout_marginTop="5dp"
         android:gravity="center"
+        android:background="@drawable/adminbg"
         android:orientation="vertical"
         android:padding="10dp">
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/ProfilePic"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
             android:layout_marginTop="5dp"
             android:src="@drawable/profile" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/EmlpoyeeName"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            style="@style/Text_Theme"
+            android:background="@drawable/toolbargradient"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="FullName"
@@ -42,7 +44,8 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/AdminID"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            style="@style/Text_Theme"
+            android:background="@drawable/toolbargradient"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Employee ID"
@@ -66,6 +69,7 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/toolbargradient"
             android:hint="Email Address"
             android:padding="10dp"
             android:textColorHint="@color/black"
@@ -84,10 +88,11 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/AdminPhoneNo"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            style="@style/Text_Theme"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Phone Number"
+            android:background="@drawable/toolbargradient"
             android:padding="10dp"
             android:textColorHint="@color/black"
             app:boxStrokeColor="@color/black"
@@ -105,11 +110,12 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/AdminCourse"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            style="@style/Text_Theme"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Course"
             android:padding="10dp"
+            android:background="@drawable/toolbargradient"
             android:textColorHint="@color/black"
             app:boxStrokeColor="@color/black"
             app:boxStrokeWidthFocused="2dp"
@@ -126,13 +132,14 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/AdminClass"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            style="@style/Text_Theme"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Write a class He/She teaches"
             android:padding="10dp"
             android:textColorHint="@color/black"
             app:boxStrokeColor="@color/black"
+            android:background="@drawable/toolbargradient"
             app:boxStrokeWidthFocused="2dp"
             app:endIconMode="clear_text"
             app:endIconTint="@color/black"
@@ -147,12 +154,13 @@
 
         <Button
             android:id="@+id/Admin_next_btn"
-            android:layout_width="wrap_content"
+            style="@style/Btn_Theme"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:background="@color/black"
             android:onClick="callVerifyScreen"
             android:text="Update"
+            android:textAllCaps="false"
             android:textColor="@color/white" />
 
     </LinearLayout>

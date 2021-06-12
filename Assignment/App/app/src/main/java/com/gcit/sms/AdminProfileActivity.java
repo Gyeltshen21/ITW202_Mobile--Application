@@ -86,16 +86,19 @@ public class AdminProfileActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(),"Something went wrong",Toast.LENGTH_SHORT).show();
             }
         });
+        //Button to Choose photo
+        AdminProfilePic.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openAdminFileChooser();
+            }
+        });
     }
 
     public void GoBackToHome(View view) {
         Intent intent = new Intent(getApplicationContext(),HomeActivity.class);
         intent.putExtra("schoolCode",sCode);
         startActivity(intent);
-    }
-    //Button to Choose photo
-    public void ChooseAdminProfilePhoto(View view) {
-        openAdminFileChooser();
     }
     //Method to choose file
     private void openAdminFileChooser() {

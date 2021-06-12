@@ -36,13 +36,14 @@ public class PhoneAuthActivity extends AppCompatActivity {
     private PhoneAuthProvider.ForceResendingToken forceResending;
     private PhoneAuthProvider.OnVerificationStateChangedCallbacks mCallBacks;
     private String mVerificationId; //will hold OTPVerification code
-    LinearLayout phoneLl, codeLl;
+    private LinearLayout phoneLl, codeLl;
     private TextView codeSentDescription, resentCodeTv;
     private EditText phoneEt, codeEt;
     private Button phoneContinueBtn, codeSubmitBtn;
     private static final String TAG = "MAIN_TAG";
     private FirebaseAuth firebaseAuth;
     private ProgressDialog progressDialog;
+    String phone, schoolCode;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,6 +51,8 @@ public class PhoneAuthActivity extends AppCompatActivity {
 
         rootNode = FirebaseDatabase.getInstance();
         reference = rootNode.getReference("SMSadmin");
+        String s1 = getIntent().getStringExtra("schoolCode");
+        schoolCode = s1;
 
         phoneLl = (LinearLayout) findViewById(R.id.phoneLl);
         codeLl = (LinearLayout) findViewById(R.id.codeLl);
@@ -105,9 +108,16 @@ public class PhoneAuthActivity extends AppCompatActivity {
         phoneContinueBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String phone = phoneEt.getText().toString().trim();
+                String number = phoneEt.getText().toString().trim();
+                String phone = "+975" + number;
+                String phone1 = getIntent().getStringExtra("phone");
                 if(TextUtils.isEmpty(phone)){
                     Toast.makeText(PhoneAuthActivity.this,"Please enter your phone number",Toast.LENGTH_SHORT).show();
+                }
+                if(!phone.equals(phone1)){
+                    progressDialog.dismiss();
+                    phoneEt.setError("No such phone number" + phone + " in employeeID/SchoolCode :" +schoolCode);
+                    phoneEt.requestFocus();
                 }
                 else{
                     startPhoneNumberVerification(phone);
@@ -119,7 +129,8 @@ public class PhoneAuthActivity extends AppCompatActivity {
         resentCodeTv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String phone = phoneEt.getText().toString().trim();
+                String number = phoneEt.getText().toString().trim();
+                String phone = "+975" +number;
                 if(TextUtils.isEmpty(phone)){
                     Toast.makeText(getApplicationContext(),"Please enter your phone number",Toast.LENGTH_SHORT).show();
                 }
@@ -151,23 +162,27 @@ public class PhoneAuthActivity extends AppCompatActivity {
     }
 
     private void signInWithPhoneAuthCredential(PhoneAuthCredential credential) {
-        progressDialog.setMessage("Logged In");
+        progressDialog.setMessage("Loading...");
         progressDialog.show();
         firebaseAuth.signInWithCredential(credential).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
             @Override
             public void onSuccess(AuthResult authResult) {
                 progressDialog.dismiss();
-                String name = getIntent().getStringExtra("admin_name");
-                String schoolCode = getIntent().getStringExtra("sCode");
+                String name = getIntent().getStringExtra("name");
                 String email = getIntent().getStringExtra("email");
                 String password = getIntent().getStringExtra("password");
+                String whatToDo = getIntent().getStringExtra("whatToDo");
                 String phoneNo = firebaseAuth.getCurrentUser().getPhoneNumber();
-                UserHelperClass userHelperClass = new UserHelperClass(name, schoolCode, email, phoneNo, password);
-                reference.child(schoolCode).setValue(userHelperClass);
-                Intent intent = new Intent(PhoneAuthActivity.this,HomeActivity.class);
-                intent.putExtra("schoolCode",schoolCode);
-                startActivity(intent);
-                finish();
+                //Password Update
+                if(whatToDo.equals("AdminUpdate")){
+                    updateOldUserData();
+                }
+                else if(whatToDo.equals("EmployeeUpdate")){
+                    updateOldEmployeeUserData();
+                }
+                else{
+                    Toast.makeText(getApplicationContext(),"Something went wrong", Toast.LENGTH_SHORT).show();
+                }
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
@@ -176,6 +191,23 @@ public class PhoneAuthActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(),e.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
+    }
+
+    private void updateOldUserData() {
+        progressDialog.dismiss();
+        Intent intent = new Intent(getApplicationContext(), SetNewPasswordActivity.class);
+        intent.putExtra("phone",phone);
+        intent.putExtra("schoolCode",schoolCode);
+        startActivity(intent);
+        finish();
+    }
+    private void updateOldEmployeeUserData() {
+        progressDialog.dismiss();
+        Intent intent = new Intent(getApplicationContext(), TeacherNewPasswordActivity.class);
+        intent.putExtra("phone",phone);
+        intent.putExtra("schoolCode",schoolCode);
+        startActivity(intent);
+        finish();
     }
 
     private void resendVerification(String phone, PhoneAuthProvider.ForceResendingToken token) {
@@ -205,5 +237,9 @@ public class PhoneAuthActivity extends AppCompatActivity {
                         .setCallbacks(mCallBacks)
                         .build();
         PhoneAuthProvider.verifyPhoneNumber(options);
+    }
+
+    public void BackToForgotPasswordPage(View view) {
+        startActivity(new Intent(PhoneAuthActivity.this, ForgotPasswordActivity.class));
     }
 }

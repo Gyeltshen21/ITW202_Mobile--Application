@@ -49,7 +49,8 @@ public class TeacherRegisterActivity extends AppCompatActivity {
             String name = teacherFullName.getEditText().getText().toString().trim();
             String employeeid = teacherEmployeeID.getEditText().getText().toString().trim();
             String email = teacherEmail.getEditText().getText().toString().trim();
-            String phoneNo = teacherPhoneNo.getEditText().getText().toString().trim();
+            String phone = teacherPhoneNo.getEditText().getText().toString().trim();
+            String phoneNo = "+975" +phone;
             String password = teacherPassword.getEditText().getText().toString().trim();
             firebaseAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener((task)-> {
                 if (!task.isSuccessful()) {
@@ -111,7 +112,7 @@ public class TeacherRegisterActivity extends AppCompatActivity {
     }
     private boolean validatePhoneNumber(){
         String val = teacherPhoneNo.getEditText().getText().toString().trim();
-        String checksTNumber = "[7][7][0-9]{6}";
+        String checksTNumber = "[1][7][0-9]{6}";
         String checksBNumber = "(0/91)?[1][7][0-9]{6}";
         if(val.isEmpty()){
             teacherPhoneNo.setError("Phone Number is Required!");
